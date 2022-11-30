@@ -1,0 +1,64 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+})
+export class HomeComponent {
+  responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 2,
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
+  banners = [
+    {
+      name: 'service1',
+      src: '../../../assets/home-slider/image3.jpg',
+      route: '',
+    },
+    {
+      name: 'service2',
+      src: '../../../assets/home-slider/image4.png',
+      route: '/pages/taxes/predial',
+    },
+    {
+      name: 'service3',
+      src: '../../../assets/home-slider/image5.jpg',
+      route: '/pages/taxes/predial',
+    },
+  ];
+  buttons = [
+    { text: 'Agenda a un click', icon: 'pi pi-calendar-plus' },
+    { text: 'Tienda Catasig', icon: 'pi pi-shopping-cart' },
+    { text: 'Catasig en línea', icon: 'pi pi-globe' },
+    { text: 'Ir a Catasig', icon: 'pi pi-external-link' },
+    { text: 'Observatorio Catasig', icon: 'pi pi-search' },
+  ];
+  pqrs = [
+    { name: 'PQRS', src: '../../../assets/home-pqrs/pqrs.svg', link: '' },
+    {
+      name: 'Guía de servicios',
+      src: '../../../assets/home-pqrs/guia.svg',
+      link: '',
+    },
+  ];
+  cards = [
+    { title: 'Portafolio de servicios', icon: 'pi pi-briefcase' },
+    { title: 'Preguntas frecuentes', icon: 'pi pi-comments' },
+    { title: 'Memorias de censo inmobiliario', icon: 'pi pi-home' },
+    { title: 'Sedes y horarios', icon: 'pi pi-building' },
+  ];
+}

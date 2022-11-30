@@ -1,0 +1,136 @@
+@import "../../variables.scss";
+
+.layout-container {
+  .header-container {
+    margin-bottom: 1rem;
+  }
+  .main-container {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    display: flex;
+  }
+  .gov-container {
+    padding: 0.2rem 6rem;
+    background-color: #3366cc;
+    .gov-logo {
+      margin-top: 0.1rem;
+      height: 20px;
+      width: auto;
+    }
+  }
+}
+
+.catasig-logo {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  height: 40px;
+  width: auto;
+}
+
+.copyright {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  right: 6rem;
+  margin-top: 0.2rem;
+}
+
+.logo__small {
+  height: 80px;
+  width: auto;
+}
+
+.title-container {
+  margin-top: 1rem;
+}
+
+.btn-container {
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.logo-section {
+  width: 70%;
+}
+
+.search-section {
+  width: 30%;
+  .search-input {
+    width: 300px !important;
+    display: grid;
+    font-size: 0.5rem !important;
+  }
+  .search-icon {
+    position: absolute;
+    z-index: 100;
+    right: 12%;
+    opacity: 0.3;
+    margin-top: 0.5rem;
+  }
+}
+
+footer {
+  margin-top: 5rem;
+  position: relative;
+  bottom: 0;
+  .footer-container {
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: $default-border-radius;
+    color: #494949;
+    margin: 1rem;
+    box-shadow: $box-shadow-inverted;
+    width: 80%;
+    margin: auto;
+    margin-top: -5rem;
+    .title {
+      color: $main-color;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Standar media queries for tablet and mobiles */
+@media screen and (max-width: 900px) {
+  .layout-container {
+    .main-container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      display: block;
+    }
+    .content-container {
+      padding: 0.2rem 1rem;
+    }
+    .gov-container {
+      padding: 0.2rem 1rem;
+    }
+  }
+
+  .logo-section {
+    width: 100%;
+  }
+
+  .search-section {
+    width: 100%;
+    .search-input {
+      width: 100% !important;
+      display: inline-grid;
+      padding-bottom: 1rem;
+    }
+    .search-icon {
+      right: 2rem;
+    }
+  }
+
+  footer {
+    .footer-container {
+      width: 100%;
+    }
+  }
+
+  .copyright {
+    right: 1rem;
+  }
+
+}

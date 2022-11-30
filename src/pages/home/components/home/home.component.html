@@ -1,0 +1,62 @@
+<section>
+  <div class="container">
+    <p-carousel
+      [value]="banners"
+      [numVisible]="1"
+      [numScroll]="1"
+      [responsiveOptions]="responsiveOptions"
+      [autoplayInterval]="6000"
+      [circular]="true"
+    >
+      <ng-template let-banner pTemplate="item">
+        <img
+          src="{{ banner.src }}"
+          alt="{{ banner.name }}"
+          class="banner-img"
+        />
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="btn-container">
+      <div *ngFor="let button of buttons">
+        <button type="button" class="btn thin btn-main">
+          <div class="btn-wrapper">
+            <em class="{{ button.icon }}"></em> <span>{{ button.text }}</span>
+          </div>
+          
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="pqrs-container">
+      <div *ngFor="let item of pqrs" class="pqrs-item">
+        <a href="{{ item.link }}">
+          <img src="{{ item.src }}" alt="{{ item.name }}" class="pqrs-img"
+        /></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="container card-container">
+        <div *ngFor="let item of cards">
+            <div class="card">
+              <em class={{item.icon}} style="font-size: 2rem"></em>
+              <h3 class="title second-family">{{item.title}}</h3>
+              
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+

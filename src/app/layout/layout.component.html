@@ -1,0 +1,84 @@
+<div class="layout-container">
+  <!--<div class="gov-container">
+        <img src="../../assets/govlogo.png" alt="Gov logo" class="gov-logo">
+    </div>
+    <mat-grid-list [cols]="breakpoint" rowHeight="4:0.5" (window:resize)="handleSize()">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+      </mat-grid-list>-->
+
+  <!--Main elements in layout-->
+  <div class="header-container">
+    <div class="gov-container">
+      <a href="https://www.gov.co/"
+        ><img src="../../assets/govlogo.png" alt="Gov logo" class="gov-logo"
+      /></a>
+    </div>
+
+    <div class="main-container">
+      <div class="logo-section">
+        <div class="flex">
+          <div class="flex">
+            <a [routerLink]="'/'">
+              <img
+                src="../../assets/catasiglogo.png"
+                alt="Alcaldia logo"
+                class="catasig-logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="search-section">
+        <div class="btn-container">
+          <em class="pi pi-search search-icon"></em>
+          <p-autoComplete
+            [suggestions]="results"
+            class="search-input"
+            (completeMethod)="search($event)"
+            placeholder="Digite una palabra para buscar..."
+          ></p-autoComplete>
+        </div>
+      </div>
+    </div>
+
+    <app-menu></app-menu>
+  </div>
+
+  <!--This where the whole content need to go-->
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer goes here -->
+  <footer class="bg-main">
+    <div class="s-p">
+      <div class="container">
+        <div class="footer-container">
+          <h3 class="text-medium">
+            Unidad Administrativa de Catastro Distrital UAECD Sede principal
+          </h3>
+          <p class="light second-family text-small m-0">
+            Av. Carrera 30 No. 25 - 90, Torre B Piso 2 - Código postal 111311
+            Atención presencial de lunes a viernes de 7.00 am a 4.30 pm
+            Conmutador: (57) 601 234 7600 - Comunica con todas las dependencias
+            Línea de atención al usuario: (57) 601 234 7600 Ext. 7600 Línea
+            gratuita: 018000 910 488 Notificaciones judiciales:
+            notificaciones@catastrobogota.gov.co Información general: Línea 195
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gov-container">
+      <a href="https://www.gov.co/"
+        ><img src="../../assets/govlogo.png" alt="Gov logo" class="gov-logo"
+      /></a>
+
+      <span class="copyright second-family text-small"
+        >© 2022 Catasig todos los derechos reservados</span
+      >
+    </div>
+  </footer>
+</div>

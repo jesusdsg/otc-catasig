@@ -1,0 +1,47 @@
+@import "../../../variables.scss";
+
+::ng-deep .p-menubar {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 4px solid $main-color !important;
+  @media screen and (max-width: 896px) {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link:not(.p-disabled):hover {
+  background: rgba($secondary-color, 0) !important;
+}
+
+::ng-deep
+  .p-menubar
+  .p-menubar-root-list
+  > .p-menuitem
+  > .p-menuitem-link:not(.p-disabled):focus {
+  box-shadow: none;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > {
+  .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    color: $main-color !important;
+  }
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+  color: $main-color !important;
+}
+
+::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-submenu-icon, .p-menubar .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-submenu-icon {
+  color: $main-color !important;;
+}
+/* Special line to activate the active route color (remove p-menuitem-text if u want the bg color)*/
+::ng-deep .p-menuitem-link-active .p-menuitem-text {
+  color: $main-color !important;
+}
