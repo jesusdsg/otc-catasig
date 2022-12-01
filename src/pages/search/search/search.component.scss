@@ -1,0 +1,39 @@
+.search-container {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+::ng-deep .p-autocomplete {
+  display: block;
+  .p-inputtext {
+    width: 100% !important;
+  }
+}
+
+::ng-deep table.gsc-search-box {
+  padding-top: 2rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+    padding-bottom: 2rem;
+  @media screen and (max-width: 900px) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .gsc-input-box {
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+}
+
+::ng-deep .gsc-search-button {
+  margin-left: 2px;
+  display: none;
+}
+
+::ng-deep .gsc-results-wrapper-wrapper {
+  border-radius: 10px;
+}
+
+::ng-deep .gsc-results-wrapper-overlay {
+  border-radius: 10px;
+}

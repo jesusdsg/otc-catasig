@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { GlobalSearchService } from '../services/global-search.service';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/development';
 
 @Component({
   selector: 'app-layout',
@@ -10,9 +12,12 @@ import { GlobalSearchService } from '../services/global-search.service';
 export class LayoutComponent {
   breakpoint: number = 0;
   windowWidth: number = 0;
-  items: MenuItem[]= [];
+  items: MenuItem[] = [];
 
-  constructor(private globalSearchService: GlobalSearchService){}
+  constructor(
+    private globalSearchService: GlobalSearchService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.checkSize();
@@ -31,8 +36,17 @@ export class LayoutComponent {
 
   results: string[] = [];
 
+  openSearch(query: string, page: string) {
+    const url = `https://www.google.com/search?q=${query}+site%3A${page}`;
+    window.open(url, '_blank');
+  }
+
   search(event: any) {
-    console.log('Searching ', event.target.value);
+    /* Submit the query value in the Global Search service variable called query */
     this.globalSearchService.query.next(event.target.value);
+    this.text = '';
+    /* Redirect to the search component */
+    this.router.navigate(['/search']);
+    this.openSearch(event.target.value, environment.siteURL)
   }
 }

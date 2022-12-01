@@ -1,0 +1,52 @@
+<section>
+  <div class="container search-container">
+    <div class="gcse-search" autoSearchOnLoad="true" newWindow="false"></div>
+    <div class="container">
+      <p>
+        La búsqueda se realiza con palabras clave exactas y sin importar la
+        mayúsculas; las palabras clave más cortas que las de longitud mínima son
+        ignoradas Utilice OR en mayúsculas para obtener más resultados.
+      </p>
+      <ul>
+        <li>
+          Por ejemplo: gato OR perro (contenido que incluya "gato" o "perro")
+          Puede utilizar AND en mayúsculas para incluir todas las palabras, pero
+          será lo mismo que el comportamiento predeterminado.
+        </li>
+        <li>
+          Por ejemplo: gato AND perro (lo mismo que "gato perro", contenido debe
+          incluir "gato" y "perro") Utilice comillas para buscar una frase.
+        </li>
+        <li>
+          Por ejemplo: "El gato come ratones" Puede restringir palabras claves
+          con - para excluirlos; debe todavía tener al menos una palabra clave
+          "positiva". Por ejemplo: gato -perro (contenido debe incluir gato pero
+          no puede contener perro)
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="false">
+  <div class="container">
+    <div class="container search-container">
+      <p-autoComplete
+        [(ngModel)]="text"
+        [suggestions]="results"
+        class="search-input"
+        (keyup.enter)="search($event)"
+        placeholder="Digite una palabra para buscar..."
+      ></p-autoComplete>
+    </div>
+    <p class="light second-family">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, corrupti
+      magni? In mollitia inventore, architecto, incidunt ipsa accusantium error
+      similique excepturi numquam quos delectus possimus voluptates impedit
+      tempora odio natus? Lorem ipsum, dolor sit amet consectetur adipisicing
+      elit. Fugiat eius asperiores alias quis obcaecati dicta maxime voluptas
+      veniam ad, blanditiis exercitationem ut ipsam cupiditate. Quae iste minus
+      mollitia expedita consequuntur.
+    </p>
+  </div>
+</section>

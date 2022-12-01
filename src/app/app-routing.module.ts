@@ -19,7 +19,12 @@ const routes: Routes = [
           path: 'pages',
           loadChildren: () => import('../pages/pages.module').then( m => m.PagesModule),
           //canActivate: [AuthGuard]
-        } 
+        },
+        {
+          path: 'search',
+          loadChildren: () => import('../pages/search/search.module').then( m => m.SearchModule),
+          //canActivate: [AuthGuard]
+        }
       ]
     }
 ];

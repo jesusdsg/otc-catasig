@@ -23,7 +23,7 @@
   <div class="container">
     <div class="btn-container">
       <div *ngFor="let button of buttons">
-        <button type="button" class="btn thin btn-main">
+        <button type="button" class="btn thin btn-main" routerLink={{button.route}}>
           <div class="btn-wrapper">
             <em class="{{ button.icon }}"></em> <span>{{ button.text }}</span>
           </div>
