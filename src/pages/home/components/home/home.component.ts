@@ -26,17 +26,17 @@ export class HomeComponent {
   banners = [
     {
       name: 'service1',
-      src: '../../../assets/home-slider/image3.jpg',
+      src: '../../../assets/home-slider/imagecampana.svg',
       route: '',
     },
     {
       name: 'service2',
-      src: '../../../assets/home-slider/image4.png',
+      src: '../../../assets/home-slider/banner2.svg',
       route: '/pages/taxes/predial',
     },
     {
       name: 'service3',
-      src: '../../../assets/home-slider/image5.jpg',
+      src: '../../../assets/home-slider/banner3.svg',
       route: '/pages/taxes/predial',
     },
   ];

@@ -21,6 +21,7 @@ export class LayoutComponent {
 
   ngOnInit() {
     this.checkSize();
+    this.formatGoogleSearchInput();
   }
 
   checkSize() {
@@ -30,6 +31,11 @@ export class LayoutComponent {
 
   handleSize() {
     this.checkSize();
+  }
+
+  formatGoogleSearchInput(){
+    let searchInput = document.getElementById('gsc-i-id1');
+    if (searchInput) searchInput.setAttribute("placeholder", "SEARCH")
   }
 
   text: string = '';
