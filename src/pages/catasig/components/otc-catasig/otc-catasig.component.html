@@ -1,9 +1,59 @@
+<div class="spinner-container" *ngIf="visibleSpinner">
+  <div class="spinner">
+    <h3 class="light">Observatorio</h3>
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+</div>
+
 <section>
-    <div class="container">
-        <h3 class="light text-larger text-center">Bienvenido al Observatorio Catrastal</h3>
-        <hr>
-        <div class="chart-container">
-            <canvas id="chart-base">{{chart}}</canvas>
+  <div class="container s-p">
+    <h3 class="light text-larger text-center">
+      Bienvenido al Observatorio Catrastal
+    </h3>
+    <hr />
+
+    <div class="s-p">
+      <h3 class="light text-medium text-center">Metro cuadrado Sabanalarga</h3>
+      <div class="chart-container-grid">
+        <canvas class="chart-element" id="chart-metro-cuadrado-average">{{
+          metroCuadradoChart
+        }}</canvas>
+        <div>
+          <p class="light secondary-family">
+            En este gráfico se estáran observando y filtrando los datos
+            correspondientes a los predios catastrales en el municipio de
+            Sabanalarga.
+          </p>
+          <ul class="light">
+            <li class="second-family">
+              Puede visualizar la cantidad aproximada de los totales en predios.
+            </li>
+            <li class="second-family">
+              También puede consultar el promedio por metro cuadrado.
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+
+    <div class="s-p">
+        <h3 class="light text-medium text-center">Tipos de Predios en Sabanalarga</h3>
+        <div class="chart-container-grid">
+          <canvas class="chart-element" id="chart-tipos-predios">{{
+            tiposPrediosChart
+          }}</canvas>
+          <div>
+            <p class="light secondary-family">
+              En este gráfico se estáran observando y filtrando los datos
+              correspondientes a las cantidades de predios catastrales en el municipio de
+              Sabanalarga basados en los tipos <strong>Rural</strong> y <strong>Urbanos</strong>.
+              <br><br>
+              Seleccione el Destino del Precio para visualizar:
+            </p>
+            <p-dropdown [options]="tiposPredios" (onChange)="filterDestiny($event)" [(ngModel)]="selectedPredio" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+      </div>
+
+  </div>
 </section>

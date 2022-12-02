@@ -9,6 +9,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuComponent } from './shared/menu/menu.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent, MenuComponent],
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     AutoCompleteModule,
     BrowserAnimationsModule,
     MatGridListModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

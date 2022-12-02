@@ -2,3 +2,45 @@
     padding: 1rem;
     margin: auto;
 }
+
+.chart-container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.chart-element {
+    width: 100% !important;
+    height: auto !important;
+    cursor: pointer;
+}
+
+.spinner-container {
+    position: absolute;
+    background-color: #e7e7e7e8;
+    height: 100%;
+    width: 100%;
+    margin-top: -1rem;
+    padding: 8rem;
+
+    .spinner {
+        margin: auto;
+        width: 10%;
+    }
+}
+
+::ng-deep .p-dropdown {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .chart-container-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        .chart-element{
+            width: 100%;
+        }
+    }
+}
