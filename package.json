@@ -7,6 +7,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "github-pages": "ng build --output-path docs --base-href /otc-catasig/",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
