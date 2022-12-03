@@ -22,10 +22,10 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'taxes',
+        path: 'normativity',
         loadChildren: () =>
-        import("./taxes/taxes.module").then(
-          (m) => m.TaxesModule
+        import("./normativity/normativity.module").then(
+          (m) => m.NormativityModule
         )
       },
       {

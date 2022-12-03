@@ -1,14 +1,4 @@
 <div class="layout-container">
-  <!--<div class="gov-container">
-        <img src="../../assets/govlogo.png" alt="Gov logo" class="gov-logo">
-    </div>
-    <mat-grid-list [cols]="breakpoint" rowHeight="4:0.5" (window:resize)="handleSize()">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-      </mat-grid-list>-->
-
   <!--Main elements in layout-->
   <div class="header-container">
     <div class="gov-container">
@@ -34,9 +24,10 @@
         <div class="btn-container">
           <em class="pi pi-search search-icon"></em>
           <p-autoComplete
+            [(ngModel)]="text"
             [suggestions]="results"
             class="search-input"
-            (completeMethod)="search($event)"
+            (keyup.enter)="search($event)"
             placeholder="Digite una palabra para buscar..."
           ></p-autoComplete>
         </div>
@@ -65,7 +56,7 @@
             Conmutador: (57) 601 234 7600 - Comunica con todas las dependencias
             Línea de atención al usuario: (57) 601 234 7600 Ext. 7600 Línea
             gratuita: 018000 910 488 Notificaciones judiciales:
-            notificaciones@catastrobogota.gov.co Información general: Línea 195
+            info@catasig.gov.co Información general: Línea 195
           </p>
         </div>
       </div>

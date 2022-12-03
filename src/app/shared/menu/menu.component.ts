@@ -17,9 +17,9 @@ export class MenuComponent {
     {
       label: 'Normatividad',
       items: [
-        { label: 'Normas que nos rigen', routerLink: '' },
-        { label: 'Decretos', routerLink: '' },
-        { label: 'Resoluciones', routerLink: '' },
+        { label: 'Normas que nos rigen', routerLink: '/pages/normativity/rules' },
+        { label: 'Decretos', routerLink: '/pages/normativity/decrees' },
+        { label: 'Resoluciones', routerLink: '/pages/normativity/resolutions' },
       ],
     },
     {

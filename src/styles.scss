@@ -86,17 +86,31 @@ a {
   display: inline-flex;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #d8d8d8;
+}
+
+.under-construction {
+  width: 45%;
+  height: auto;
+  margin: auto;
+  @media screen and (max-width: 900px) {
+    width: 80%;
+  }
+}
+
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
 }
 ::-webkit-scrollbar-thumb {
-  background: $main-color;
+  background: #979797;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba($main-color, 0.8);
+  background: $main-color-hover;
 }
 
 .bg-main {
