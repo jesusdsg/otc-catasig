@@ -6,6 +6,7 @@
   },
   "scripts": {
     "ng": "ng",
+    "version": "ng version",
     "start": "ng serve",
     "github-pages": "ng build --output-path docs --base-href /otc-catasig/",
     "build": "ng build",
